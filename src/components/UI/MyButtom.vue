@@ -1,13 +1,15 @@
 <template>
-  <button>
+  <button class="btn">
       <slot></slot>
   </button>
 </template>
 
 
 
-<script setup>
-
+<script>
+  export default {
+    name: "my-buttom",
+  }
 </script>
 
 

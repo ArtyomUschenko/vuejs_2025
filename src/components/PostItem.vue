@@ -6,7 +6,7 @@
       <div class=""><strong>Описание поста: </strong> {{post.body}}</div>
     </div>
     <div class="post__btns">
-      <my-buttom class="btn" @click="deletePost">Удалить</my-buttom>
+      <my-buttom class="btn">Удалить</my-buttom>
     </div>
   </div>
 </template>
@@ -15,7 +15,6 @@
   import MyButtom from "@/components/UI/MyButtom.vue";
 
   export default {
-    components: {MyButtom},
     props: {
       post: {
         type: Object,
