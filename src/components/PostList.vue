@@ -1,6 +1,4 @@
-<script setup>
 
-</script>
 
 <template>
   <div class="post" v-for="post in posts">
@@ -8,6 +6,20 @@
     <div class=""><strong>Описание поста: </strong> {{post.body}}</div>
   </div>
 </template>
+
+<script>
+ export default {
+    props: {
+      posts: {
+        type: Array,
+        required: true
+      }
+    }
+ }
+</script>
+
+
+
 
 <style scoped>
 .post {
