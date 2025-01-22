@@ -1,27 +1,52 @@
 <template>
-  <div class="">Количесво: <strong>{{counter}}</strong></div>
-  <div class="">Счетчик: <strong>{{discounter}}</strong></div>
-  <button v-on:click="addcounter()">Увеличить</button>
-  <button @click="discounter = discounter -1">Уменьшить</button>
+  <div class="app">
+    <post-form />
+    <post-list />
+  </div>
 </template>
-
-<script>
-  export default {
-    data() {
-      return {
-        counter: 0,
-        discounter: 0
-      }
-    },
-    methods: {
-      addcounter() {
-        this.counter = this.counter + 1;
-      }
+<script >
+import PostForm from "@/components/PostForm.vue";
+import PostList from "@/components/PostList.vue";
+export default {
+  components: {PostForm, PostList},
+  data() {
+    return {
+      posts:
+          [
+            {id: 1, title: 'Пост о ГИС', body: 'Описание ГИС'},
+            {id: 2, title: 'Пост о ГИС 2', body: 'Описание ГИС 2'},
+            {id: 3, title: 'Пост о ГИС 3', body: 'Описание ГИС 3'},
+            {id: 3, title: 'Пост о ГИС 4', body: 'Описание ГИС 4'}
+          ],
+      title: "",
+      body: "",
     }
-
+  },
+  methods: {
+    createPost() {
+      const newPost = {
+        id: Date.now(),
+        title: this.title,
+        body: this.body
+      }
+      this.posts.push(newPost)
+      this.title = "";
+      this.body = "";
+    },
   }
+}
 </script>
 
-<style scoped>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.app {
+  padding: 20px;
+}
+
 
 </style>
