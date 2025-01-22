@@ -26,10 +26,7 @@
 
 
 <style scoped>
-.post {
-  padding: 15px;
-  border: 3px solid #ccc;
-  margin-top: 10px;
-  margin-right: 10px;
+h3 {
+  margin-top: 30px;
 }
 </style>
