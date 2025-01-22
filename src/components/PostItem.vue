@@ -6,13 +6,16 @@
       <div class=""><strong>Описание поста: </strong> {{post.body}}</div>
     </div>
     <div class="post__btns">
-      <button class="btn" @click="deletePost">Удалить</button>
+      <my-buttom class="btn" @click="deletePost">Удалить</my-buttom>
     </div>
   </div>
 </template>
 
 <script>
+  import MyButtom from "@/components/UI/MyButtom.vue";
+
   export default {
+    components: {MyButtom},
     props: {
       post: {
         type: Object,
@@ -34,12 +37,8 @@
 }
 .btn {
   padding: 5px;
-  border: 3px solid #ccc;
   border-radius: 5px;
   font-size: 10px;
-  background-color: #ccc;
-  color: #fff;
-  cursor: pointer;
 }
 
 </style>
