@@ -6,21 +6,25 @@
       <div class=""><strong>Описание поста: </strong> {{post.body}}</div>
     </div>
     <div class="post__btns">
-      <my-buttom class="btn">Удалить</my-buttom>
+      <my-buttom class="btn" @click="deletePost(post)">Удалить</my-buttom>
     </div>
   </div>
 </template>
 
 <script>
-  import MyButtom from "@/components/UI/MyButtom.vue";
-
   export default {
     props: {
       post: {
         type: Object,
         required: true
       }
+    },
+    methods: {
+      deletePost(post) {
+        this.$emit("remove", post)
+      }
     }
+
   }
 </script>
 

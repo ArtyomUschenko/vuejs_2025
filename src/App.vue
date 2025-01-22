@@ -1,7 +1,7 @@
 <template>
   <div class="app">
     <post-form @create="createPost" />
-    <post-list :posts="posts" />
+    <post-list :posts="posts" @remove="removePost"/>
   </div>
 </template>
 <script >
@@ -16,13 +16,16 @@ export default {
             {id: 1, title: 'Пост о ГИС', body: 'Описание ГИС'},
             {id: 2, title: 'Пост о ГИС 2', body: 'Описание ГИС 2'},
             {id: 3, title: 'Пост о ГИС 3', body: 'Описание ГИС 3'},
-            {id: 3, title: 'Пост о ГИС 4', body: 'Описание ГИС 4'}
+            {id: 4, title: 'Пост о ГИС 4', body: 'Описание ГИС 4'}
           ],
     }
   },
   methods: {
     createPost(post) {
       this.posts.push(post);
+    },
+    removePost(post) {
+      this.posts = this.posts.filter(p => p.id !== post.id);
     }
   }
 }
