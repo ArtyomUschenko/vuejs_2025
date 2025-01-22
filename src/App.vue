@@ -7,6 +7,7 @@
 <script >
 import PostForm from "@/components/PostForm.vue";
 import PostList from "@/components/PostList.vue";
+import PostItem from "@/components/PostItem.vue";
 export default {
   components: {PostForm, PostList},
   data() {
