@@ -1,2 +1,3 @@
 import MyButtom from "@/components/UI/MyButtom.vue";
-export default [MyButtom]
+import MyInput from "@/components/UI/MyInput.vue";
+export default [MyButtom, MyInput]
