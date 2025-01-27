@@ -40,15 +40,15 @@ export default {
     async fetchPosts() {
       try {
         this.isPostsLoading = true;
-        setTimeout(async () => {    const response = await axios.get('https://jsonplaceholder.typicode.com/posts?_limit=10');
+          const response = await axios.get('https://jsonplaceholder.typicode.com/posts?_limit=10');
           this.posts = response.data;
           console.log(response);
-          this.isPostsLoading = false;}, 2000)
+
       }
       catch (e) {
         alert("Ошибка")
       } finally {
-
+        this.isPostsLoading = false;
       }
     }
   },
