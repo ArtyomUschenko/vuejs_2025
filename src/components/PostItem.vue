@@ -6,7 +6,7 @@
       <div class=""><strong>Описание поста: </strong> {{post.body}}</div>
     </div>
     <div class="post__btns">
-      <my-buttom class="btn" @click="deletePost(post)">Удалить</my-buttom>
+      <my-button class="btn" @click="deletePost(post)">Удалить</my-button>
     </div>
   </div>
 </template>

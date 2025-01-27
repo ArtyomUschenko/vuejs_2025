@@ -3,12 +3,11 @@
     <h4>Создание поста</h4>
     <my-input  type="text" placeholder="Название" v-model="post.title"/>
     <my-input  type="text" placeholder="Описание" v-model="post.body" />
-    <my-buttom class="btn" @click="createPost()">Создать</my-buttom>
+    <my-button class="btn" @click="createPost()">Создать</my-button>
   </form>
 </template>
 
 <script>
-import MyButtom from "@/components/UI/MyButtom.vue";
 import MyInput from "@/components/UI/MyInput.vue";
 
 export default
