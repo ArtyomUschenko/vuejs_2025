@@ -3,7 +3,7 @@
     <h1>Страница с поставми</h1>
     <div class="app__btns">
       <my-button @click="fetchPosts">Получить посты</my-button>
-      <my-button @click="showDialog()" style="margin-top: 10px">Добавить пост</my-button>
+      <my-button @click="showDialog()">Добавить пост</my-button>
       <my-select v-model="SelectedSort"/>
     </div>
     <my-dialog v-model:show="dialogVisible">
@@ -28,6 +28,9 @@ export default {
       dialogVisible: false,
       isPostsLoading: false,
       SelectedSort: "",
+      sortOptions: [
+        {value: ""}
+      ]
     }
   },
   methods: {
