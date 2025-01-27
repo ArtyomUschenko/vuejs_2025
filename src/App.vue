@@ -4,7 +4,7 @@
     <div class="app__btns">
       <my-button @click="fetchPosts">Получить посты</my-button>
       <my-button @click="showDialog()">Добавить пост</my-button>
-      <my-select v-model="SelectedSort"/>
+      <my-select v-model="SelectedSort" :options="sortOptions"/>
     </div>
     <my-dialog v-model:show="dialogVisible">
       <post-form @create="createPost"/>
@@ -29,7 +29,8 @@ export default {
       isPostsLoading: false,
       SelectedSort: "",
       sortOptions: [
-        {value: ""}
+        {value: "title", name: "По названию"},
+        {value: "body", name: "По содержимому"},
       ]
     }
   },
