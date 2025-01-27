@@ -39,9 +39,11 @@ export default {
     },
     async fetchPosts() {
       try {
-        const response = await axios.get('https://jsonplaceholder.typicode.com/posts?_limit=10');
-        this.posts = response.data;
-        console.log(response);
+        setTimeout(async () => {    const response = await axios.get('https://jsonplaceholder.typicode.com/posts?_limit=10');
+          this.posts = response.data;
+          console.log(response);}, 2000)
+
+
       }
       catch (e) {
         alert("Ошибка")
